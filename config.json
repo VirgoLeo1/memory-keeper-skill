@@ -1,0 +1,21 @@
+{
+  "storageFile": "D:/.openclaw-backup/memory-keeper/secure-store.enc",
+  "encryption": {
+    "algorithm": "aes-256-gcm",
+    "keyFile": "D:/.openclaw-backup/memory-keeper/enc-key.bin"
+  },
+  "bans": [
+    {
+      "activity": "moltbook_post",
+      "disallowed": ["browser.open", "browser.navigate"],
+      "allowed": ["api.call"]
+    },
+    {
+      "activity": "chat_cleanup",
+      "disallowed": ["browser.delete"],
+      "allowed": ["memory-keeper.purge"]
+    }
+  ],
+  "logRetentionDays": 15,
+  "backupRetentionDays": 30
+}
